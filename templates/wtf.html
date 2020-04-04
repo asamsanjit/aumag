@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{title}}</title>
+        <meta name="description" content="Martin is a responsive creative template">
+    <meta name="keywords" content="portfolio, personal, corporate, business, parallax, creative, agency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/favicon.ico" rel="icon" type="image/png">
+     {% include  "style-header.html" %}
+     <style type="text/css">
+     .border {
+      border: 1px solid yellow;
+      background-color: #E1BEE7;
+      background-image: {{url_for('static', filename='img/4.jpg')}}
+     }
+
+     </style>
+    </head>
+    <body style="background-color: #7e7e7e">
+
+    <!-- ====== Navgition ======  -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- logo -->
+          <a href="/">
+            <div class="logo">
+              <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            </div>
+          </a>
+        </div>
+        <!-- Collect the nav links, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="nav-icon-collapse">
+        <!-- links -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="create-test.html" class="active">Create Test</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><br>
+    <br><br><br><br><br><br>  
+
+   
+      <h2 style = "text-align: center; color: #FCE4EC;">Create test</h2><br><br><br>
+      
+      <form action = "{{url_for('create')}}" method="POST">
+
+         <fieldset style="margin:50px 200px 100px 200px; padding:100px;" class="border">
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+                User Name  : <br><input type="text" name="username" placeholder="Type ur username" style="size:100px" /><br/><br>
+                Test Title : <br><input type="text" name="test_name" placeholder="Name of ur test"/><br><br>
+              
+              <h4> Insert Your Result </h4>
+             <div>
+               Test 1 : <input type="text" name="test_result1" placeholder="Type ur result text" ><br/><br/> 
+               Test 2 : <input type="text" name="test_result2" placeholder="Type ur result text"><br/><br/>
+               Test 3 : <input type="text" name="test_result3" placeholder="Type ur result text"><br/><br/>
+               Test 4 : <input type="text" name="test_result4" placeholder="Type ur result text"><br/><br/>
+               Test 5 : <input type="text" name="test_result5" placeholder="Type ur result text"><br/><br/>
+               Test 6 : <input type="text" name="test_result6" placeholder="Type ur result text"><br/><br/>
+               Test 7 : <input type="text" name="test_result7" placeholder="Type ur result text"><br/><br/>
+               Test 8 : <input type="text" name="test_result8" placeholder="Type ur result text"><br/><br/>
+             </div>  
+             <br/>
+             <input type="submit" name="submit" value="submit" class="butn butn-bg">  
+            </div>
+      </form>
+
+
+   </body>
+</html>

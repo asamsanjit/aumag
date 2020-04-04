@@ -1,0 +1,25 @@
+
+<h3 class="title">Result Form</h3>
+<div class="form_container">
+  <form id="QuestionForm" enctype="multipart/form-data" data-urlaction="/admin/result_form_submit" method="post" onsubmit="return do_Question_submit(this)">
+   
+    <label for="category">Select Question</label>
+    <select name="question_id" >
+       <option value="select all"> Select All</option>
+      {% for q in data %}
+       <option value="{{q.question_id}}">{{q.test_question}}</option>  
+      {% endfor %}
+    </select>
+
+    <label for="question">Test Result</label>
+    <input type="text"  name="test_result" placeholder="Please type your result">
+    <label for="Address">Result image</label>
+     <div style="width:200px;">
+               <input type='file' name="result_img" onchange="readURL(this);" />
+                <img id="blah" src="#" alt="your image" />
+                 
+               </div> 
+               <br>
+     <input type="Submit" name="submit" class="btn btn-primary" value="Submit"/>
+  </form>
+</div>

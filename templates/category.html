@@ -1,0 +1,16 @@
+<h3 class="title">Category Form</h3>
+<div class="form_container">
+  <form id="CategoryForm" enctype="multipart/form-data" data-urlaction="/admin/category_submit" method="post" onsubmit="return dosubmit(this)">
+    <label for="">Test Category</label>
+    <input type="text" name="test_category" placeholder="please enter test category">
+    <label for="Category">Test Category image</label>
+    <div style="width:200px;">
+     <input type='file' name="category_file" id='category_file' onchange="readURL(this);" />
+      <img id="blah" src="#" alt="your image" />             
+    </div>
+   <!--  <input type="button" data-urlaction="/admin/category_submit" value="Submit" class="btn btn-primary" value="Submit"   onclick="click_category_submit(this)"> -->
+
+    <input type="Submit" name="submit" class="btn btn-primary" value="Submit"/>
+
+  </form>
+</div>

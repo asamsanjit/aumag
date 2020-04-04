@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+
+ .design{
+		border:1px solid black;
+		width:400px;
+    background-color:#96ceb4;
+		height:300px;
+	    margin:120px;
+	}
+</style>
+</head>
+ <body class="design">
+
+ 	<p>
+ 		{% for row in rows %}
+ 		<h3>{{row["name"]}}</h3>
+ <ul>
+ <li>{{row["addr"]}}</li>
+ <li> {{ row["city"]}}</li>
+ <li>{{row['pin']}}</li>
+ </ul>
+ {% endfor %}
+ 		
+ 	</p>
+
+ <!--<table border = 1>
+ <thead>
+ <td>Name</td>
+ <td>Address>/td<
+ <td>city</td>
+ <td>Pincode</td>
+ </thead>
+
+ {% for row in rows %}
+ <tr>
+ <td>{{row["name"]}}</td>
+ <td>{{row["addr"]}}</td>
+ <td> {{ row["city"]}}</td>
+ <td>{{row['pin']}}</td>
+ </tr>
+ {% endfor %}
+ </table>-->
+
+ <a href = "/">Go back to home page</a>
+
+ </body>
+</html>

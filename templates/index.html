@@ -1,0 +1,234 @@
+<!doctype html>
+ <html class="no-js" lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{title}}</title>
+       	<meta name="description" content="Martin is a responsive creative template">
+		<meta name="keywords" content="portfolio, personal, corporate, business, parallax, creative, agency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/favicon.ico" rel="icon" type="image/png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style media="screen">
+          #fb-btn{margin-top:0px;}
+          #profile,#logout{display: none}
+        </style>
+		 {% include  "style-header.html" %}
+    </head>
+    <body style="background-color:#C2C1C2">
+    	<!-- ====== Preloader ======  -->
+	    <div class="loading">
+			<div class="load-circle">
+			</div>
+		</div>
+		<!-- ======End Preloader ======  -->
+
+		<!-- ====== button-top ======  -->
+		<div class="button-top" data-scroll-nav="0">
+			<span>
+				<i class="fa fa-angle-up" aria-hidden="true"></i>
+			</span>
+		</div>
+		<!-- ======End button-top ======  -->
+
+		<!-- ====== Navgition ======  -->
+		<nav class="navbar navbar-default">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+
+		      <!-- logo -->
+		      <a href="/">
+		      	<div class="logo">
+		      		<img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+		      	</div>
+		      </a>
+		    </div>
+		    <!-- Collect the nav links, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="nav-icon-collapse">
+			  <!-- links -->
+		      <ul class="nav navbar-nav navbar-right">
+		      	<li>
+ 
+<div class="fb-like" data-href="http://localhost:5000/" data-width="50px" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</li>
+
+		        <li><a href="/" data-scroll-nav="0" class="active">Home</a></li>
+		        <li><a href="about.html">About</a></li>
+		        <li><a href="admin">Create Test</a></li>
+		        <li><a href="/create1">My test</a></li>
+		        <!--<li><a href="#" data-scroll-nav="5">MyTest</a></li>-->
+		        <li><a id="logout" href="#" onclick="logout()">logout</a></li>
+            	<li><fb:login-button id='fb-btn' scope="public_profile,email" onlogin="checkLoginState();">login</fb:login-button></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container -->
+		</nav>
+		
+		<!--====== Portfolio ======-->
+		<section id="works" class="portfolio section-padding" data-scroll-index="5">
+			<div class="container">
+				<div class="section-head">
+					<h3>Tests </h3>
+				</div>
+				<div class="row">
+					<!-- filter links -->
+					<div class="filtering text-center mb-50">
+						<span data-filter='*' class="active">all</span>
+					{% for c in rows %}
+						<span data-filter=".{{ c.test_category}}">{{ c.test_category}}</span>
+					 {% endfor %}
+					</div>
+					<!-- gallery -->
+					<div class="gallery text-center">
+						<!-- gallery item -->
+						{% for r in rows %}
+						<div class="col-md-4 items {{ r.test_category }}">
+							<div class="item-img">
+							<img src="{{ r.category_image }}"/>
+							<div class="item-img-overlay">
+								<div class="overlay-info v-middle text-center">
+									<h6 class="sm-titl">Test result</h6>
+									<div class="icons">
+									<button type="button" class="butn"><a href="/{{r.test_id}}">Next</a></button>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div> 
+                    {% endfor %}
+						
+						<!-- gallery item -->
+						<!--<div class="col-md-4 items Sports">
+							<div class="item-img">
+							<img src="{{url_for('static', filename='img/portfolio/12.jpg')}}" alt="image">
+							<div class="item-img-overlay">
+								<div class="overlay-info v-middle text-center">
+									<h6 class="sm-titl">Test result</h6>
+									<div class="icons">
+										<button type="button" onclick="/test" class="butn"><a href="trial">Next</a></button>		
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>-->
+
+
+						<!-- gallery item -->
+						<!--<div class="col-md-4 items Sports">
+							<div class="item-img">
+							
+							<img src="{{url_for('static', filename='img/portfolio/10.jpg')}}" alt="image">
+							<div class="item-img-overlay">
+								<div class="overlay-info v-middle text-center">
+									<h6 class="sm-titl">Test result</h6>
+									<div class="icons">
+										<button type="button" onclick="/test" class="butn"><a href="relation">Next</a></button>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>-->
+
+					</div>
+				</div>
+			</div>
+		</section>
+				  	<div id="fb-root"></div>
+
+		  <script>
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=437486770003606&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+  // This is called with the results from from FB.getLoginStatus().
+ 
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+ 
+ 
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '437486770003606',
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made
+
+     function statusChangeCallback(response) {
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+      if (response.status === 'connected') {
+
+        console.log('login and authenticated');
+        
+        setElements(true);
+      // Logged into your app and Facebook.
+    } else {
+       console.log("not authenticated");
+       setElements(false);
+      // The person is not logged into your app or we are unable to tell.
+    
+    }
+  }
+  
+   function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  
+   function setElements(isloggedIn) {
+    if(isloggedIn){
+      document.getElementById('logout').style.display='block';
+      document.getElementById('profile').style.display='block';
+      document.getElementById('fb-btn').style.display='none';
+    }
+    else {
+      document.getElementById('logout').style.display='none';
+      document.getElementById('profile').style.display='none';
+      document.getElementById('fb-btn').style.display='block';
+    }
+    // body...
+  }
+
+    function logout() {
+      FB.logout(function(response) {
+        setElements(false);
+        // body...
+      });
+  }
+</script>
+
+    <div class="container">
+      <div id="profile"></div>
+    </div>  
+          {% include 'footer.html' %}
+       
+    </body>
+</html>

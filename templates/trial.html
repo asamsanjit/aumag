@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="img/favicon.ico" rel="icon" type="image/png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ {% include  "style-header.html" %}
+<style type="text/css">
+.fbroot{
+  width:300px;
+background: #e9eae5;
+border: 1px solid #a2a3a1;
+margin: 10px;
+display: inline-block;
+padding: 10px;
+height: 300px;
+}
+</style>
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="fbroot">
+<div id="fb-root"></div>
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="true">
+  <div class="share_view">
+
+  </div>
+</div>
+</div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=437486770003606&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+</body>
+</html>

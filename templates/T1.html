@@ -1,0 +1,1200 @@
+
+<!DOCTYPE html>
+<html id="root" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf_token" content="wWJI6jtcTLTSVQsP8ONy4ZEvTt4Xx3xnSLVAeVg1">
+<meta http-equiv="cache-control" content="private, max-age=0, no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; object-src 'none'">
+<title>   {{ title }}
+</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+<link rel="stylesheet" type="text/css" href="https://static-prod.testony.com/css/main.ecdd2a8a767fd9fd17f0.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript">
+    !function(a,b,c,d,e,f,g,h){a.RaygunObject=e,a[e]=a[e]||function(){
+        (a[e].o=a[e].o||[]).push(arguments)},f=b.createElement(c),g=b.getElementsByTagName(c)[0],
+        f.async=1,f.src=d,g.parentNode.insertBefore(f,g),h=a.onerror,a.onerror=function(b,c,d,f,g){
+        h&&h(b,c,d,f,g),g||(g=new Error(b)),a[e].q=a[e].q||[],a[e].q.push({
+            e:g})}}(window,document,"script","//cdn.raygun.io/raygun4js/raygun.min.js","rg4js");
+</script>
+<script type="text/javascript">
+    rg4js('apiKey', 'vFzJ3xdChCwJV+e4EwFZeQ==');
+    rg4js('enableCrashReporting', true);
+    rg4js('options', {ignoreAjaxAbort: true});
+    //rg4js('options', {excludedHostnames: ''});
+    //rg4js('options', { ignore3rdPartyErrors: true });
+    //rg4js('whitelistCrossOriginDomains', ['code.jquery.com']);
+    rg4js('enablePulse', true);
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W7RWSN');</script>
+
+<script type='text/javascript'>
+    var yieldlove_site_id = "testony.com";
+</script>
+<script type='text/javascript' src='//cdn-a.yieldlove.com/yieldlove-bidder.js?testony.com'></script>
+<script>
+    // Load GPT asynchronously
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:')
+            + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+</script>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '437486770003606',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v2.9'
+        });
+        FB.AppEvents.logPageView();
+        FB.Event.subscribe('edge.create', function (href, widget) {
+            if (typeof(FB) != 'undefined' && FB != null) {
+
+                if(!$.browser.facebook) {
+                    Cookies.set('fbLikeButtonClicked', 'liked', {expires: 30, path: ''});
+                }
+
+                //track like in GA
+                if (typeof ga === "function") {
+                    ga('send', 'social', 'facebook', 'like', href);
+                    ga('send', 'event', 'facebook', 'like', href);
+                }
+
+                window.tracking_handler.push_custom_dimensions({
+                    'noninteraction': 'false',
+                    'action':'testony_fb_like_click',
+                    'category':'social',
+                    'label':'fb_header_like',
+                    'event':'genericEvent',
+                });
+            }
+        });
+        FB.Event.subscribe('edge.remove', function (href, widget) {
+
+            if(!$.browser.facebook) {
+                if (typeof(FB) != 'undefined' && FB != null) {
+                    if(!$.browser.facebook) {
+                        Cookies.remove('fbLikeButtonClicked', { path: '' }); // removed!
+                    }
+                }
+            }
+
+        });
+
+        FB.Event.subscribe('comment.create', function(commentResponse) {
+            var targetUrl = commentResponse.href;
+            //track comment in GA
+            if (typeof ga === "function") {
+                ga('send', 'event', 'facebook', 'comment', targetUrl);
+            }
+
+        });
+    };
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'))
+</script>
+<script src="https://static-prod.testony.com/js/jquery.c9f5aeeca3ad37bf2aa0.min.js"></script>
+<script src="https://static-prod.testony.com/js/jquery.18a74a22cf70022eaa43.whenAll.js"></script>
+<script src="https://static-prod.testony.com/js/jquery.86703d07919edcf465a5.detect.js"></script>
+<script src="https://static-prod.testony.com/js/js-cookie.6b2b4c32c65f7828b278.js"></script>
+<script src="https://static-prod.testony.com/js/moment.6d512abb617cb150604f.js"></script>
+<script src="https://static-prod.testony.com/js/bootstrap.5869c96cc8f19086aee6.min.js"></script>
+<script src="https://static-prod.testony.com/js/alertify.797614ad4a8b44381117.min.js"></script>
+<script src="https://static-prod.testony.com/js/clipboard.e77a83c01eb89942d5ae.min.js"></script>
+<script src="https://static-prod.testony.com/js/bootstrap-typeahead.38ccf5add90a4d295d04.js"></script>
+<script src="https://static-prod.testony.com/js/jquery.6ea5cd066e604bcefa6e.unveil.js"></script>
+<script src="https://static-prod.testony.com/js/sessionstorage.5fa479d57028c406ee50.min.js"></script>
+<script type="text/javascript">
+        var changeTextLoadingAnimation = [
+            {text: 'Gather friends ...'},
+            {text: 'Analyze profile ...'},
+            {text: 'Calculating your result ...'}
+        ];
+        var appConfig = {
+            debug: true,
+                        userFacebookAuthStatus: true,
+                        currentView: 'createTestType',
+            changeTextLoadingAnimation: changeTextLoadingAnimation,
+                    };
+    </script>
+<script>
+        appConfig.routes = {};
+
+        appConfig.routes.api = {};
+        appConfig.routes.api.test = {};
+        appConfig.routes.api.test.create = 'https://en.testony.com/api/v2/tests/create';
+        appConfig.routes.api.test.edit = 'https://en.testony.com/api/v2/tests/edit';
+        appConfig.routes.api.test.changeLocale = 'https://en.testony.com/api/v2/tests/change-locale';
+        appConfig.routes.api.test.addSolution = 'https://en.testony.com/api/v2/tests/addSolution';
+
+        appConfig.routes.uploadSolutionImage = 'https://en.testony.com/api/v1/tests/solutions/uploadImage';
+        appConfig.routes.downloadImage = 'https://en.testony.com/api/v1/image/download';
+
+        appConfig.routes.autoSave = 'https://en.testony.com/api/v1/tests/autoSave';
+
+        appConfig.routes.shareTest = 'https://en.testony.com/mytests/share/testIdSlug';//routeShare
+        appConfig.routes.testCreated = 'https://en.testony.com/mytests/created/testIdSlug';//routeShare
+
+        //editor page
+        appConfig.routes.editor = {};
+        appConfig.routes.editor.homeAjaxId = "https://en.testony.com/editor/index_ajax/#id#";//routeHomeAjax with id
+        appConfig.routes.editor.homeAjaxAll = "https://en.testony.com/editor/index_ajax/all";//routeHomeAjax all
+        appConfig.routes.editor.homeAjaxUnseen = "https://en.testony.com/editor/index_ajax";//routeHomeAjax unseen
+        appConfig.routes.editor.actionSeenRaw = "https://en.testony.com/editor/action/#id#/seen";//routeEditorActionSeenRaw
+        appConfig.routes.editor.editRaw = "https://en.testony.com/mytests/#id#/edit";//routeEditRaw
+        appConfig.routes.editor.editTest = "https://en.testony.com/editor/test/#id#/edit";//route editorEditTest
+        appConfig.routes.editor.editTestWithLocale = "https://en.testony.com/editor/test/#testId#/edit/#localeId#";//route editorEditTest
+        appConfig.routes.editor.translateRaw = "https://en.testony.com/mytests/#id#/translate";//routeTranslateRaw
+        appConfig.routes.editor.unChooseRaw = "https://en.testony.com/editor/action/#id#/editor_un_choose";//routeEditorUnchooseRaw routeUnChoose
+        appConfig.routes.editor.chooseRaw = "https://en.testony.com/editor/action/#id#/editor_choose";//routeEditorChooseRaw routeChoose
+        appConfig.routes.editor.dontOverrideAuthorRaw = "https://en.testony.com/editor/action/#id#/dont_override_author";//routeEditorDontOverrideRaw routeDontOverride
+        appConfig.routes.editor.overrideAuthorRaw = "https://en.testony.com/editor/action/#id#/override_author";//routeEditorOverrideRaw routeOverride
+        appConfig.routes.editor.unpublishRaw = "https://en.testony.com/editor/action/#id#/unpublish";//routeEditorUnpublishRaw routeUnpublish
+        appConfig.routes.editor.publishRaw = "https://en.testony.com/editor/action/#id#/publish";//routeEditorPublishRaw routePublish
+        appConfig.routes.editor.undeleteRaw = "https://en.testony.com/editor/action/#id#/undelete";//routeEditorUndeleteRaw
+        appConfig.routes.editor.userBlock = "https://en.testony.com/editor/user/#id#/block";
+        appConfig.routes.editor.userUnblock = "https://en.testony.com/editor/user/#id#/unblock";
+
+        appConfig.routes.reportTest = "https://en.testony.com/test/slug/#id#/reportPage";
+
+        appConfig.routes.searchTestsAutoComplete = "https://en.testony.com/searchTestsAutoComplete";
+        appConfig.routes.searchTests = "https://en.testony.com/tests/searchTests?search";
+        appConfig.routes.getTest = "https://en.testony.com/test/slug/#id#";
+        appConfig.routes.createSlug = "https://en.testony.com/createSlug/testName";
+
+        appConfig.routes.elasticCrossPromo = "https://en.testony.com/api/v1/tests/crosspromo";
+
+        appConfig.routes.voteTestUp = "https://en.testony.com/api/v1/tests/vote/up";
+        appConfig.routes.voteTestDown = "https://en.testony.com/api/v1/tests/vote/down";
+        appConfig.config = {};
+        appConfig.config.timeouts = {};
+        appConfig.config.timeouts.defaultTimeout = 8000;
+        appConfig.config.timeouts.createTest = '8000';//backendTimeoutTestCreate
+        appConfig.config.timeouts.createSolution = '8000';//backendTimeoutTestSolutionCreate
+        appConfig.config.timeouts.imageUpload = '8000';//backendTimeoutSolutionImgUpload
+        appConfig.config.timeouts.publishTest = '15000';//backendTimeoutTestPublish
+        appConfig.config.timeouts.deleteSolution = '8000';//backendTimeoutTestSolutionDelete
+        appConfig.config.timeouts.loadEditorTests = '10000';//backendTimeoutLoadEditorTests
+        appConfig.config.timeouts.editorUserBlockage = '10000';
+        appConfig.config.thumbWidth = '200';//thumbWidth
+        appConfig.config.thumbHeight = '200';//thumbHeight
+        appConfig.config.notificationDuration = '2000';//notificationDuration
+        appConfig.config.uploadedImageFileTypes = 'jpg JPG jpeg JPEG png PNG gif GIF';//uploadedImageFileTypes
+        appConfig.config.uploadedImageMinSize  = '1024';//uploadedImageMinSize
+        appConfig.config.uploadedImageMaxSize  = '10485760';//uploadedImageMaxSize
+        appConfig.config.waitForWritingTest  = '200';//waitForWritingTest
+        appConfig.config.autoSaveRefreshTime  = '10';//autoSaveRefreshTime
+        appConfig.config.crossPromoTimeout  = '5';
+        appConfig.config.resultLoaderDuration = '1000';
+
+
+        appConfig.messages = {};
+        appConfig.messages.result = 'Result';//result
+        appConfig.messages.selectGender = 'What gender should get this result?';//messageSelectGender
+        appConfig.messages.anyGender = 'Any';//messageAnyGender
+        appConfig.messages.femaleGender = 'Female';//messageFemaleGender
+        appConfig.messages.maleGender = 'Male';//messageMaleGender
+        appConfig.messages.shortText = 'Result title in 1-3 words';//messageShortText
+        appConfig.messages.resultTextUnderImage = 'Result text under image';//messageResultTextUnderImage
+        appConfig.messages.lessThanMinimumNumberOfSolutions = 'You can’t delete result, because minimumNumberOfResults resultAddedS is minimum requirement';//messageOnlyOneSolution
+        appConfig.messages.placeholderIfEmptyFirstName = 'Name of result';//placeholderIfEmptyFirstName
+        appConfig.messages.placeholderIfEmptyResultUnderImage = 'Type the text that will be displayed under result image here';//placeholderIfEmptyResultUnderImage
+        appConfig.messages.chooseAnImage = 'Choose an image';//chooseAnImage
+        appConfig.messages.removeImage = 'Remove';//removeImage
+        appConfig.messages.cancelImage = 'Cancel';//cancelImage
+        appConfig.messages.chooseLocalFile = 'Choose a local file';//chooseLocalFile
+        appConfig.messages.chooseAlsoFrom = 'You can also choose from';//chooseAlsoFrom
+        appConfig.messages.spinnerText = 'Loading';//spinnerText
+        appConfig.messages.replaceImage ='Replace image';//replaceImage
+        appConfig.messages.testCreated = '<i class="fa fa-check-circle" aria-hidden="true"></i> Test created';//testCreated
+        appConfig.messages.solutionAdded = '<i class="fa fa-check-circle" aria-hidden="true"></i> messages.solution_added';//newSolution
+        appConfig.messages.imageAdded = '<i class="fa fa-check-circle" aria-hidden="true"></i> Result image has been uploaded!';//imageAdded
+        appConfig.messages.imageUploading = '<i class="fa fa-cloud-upload" aria-hidden="true"></i> Uploading result image, please wait ...';//imageUploading
+        appConfig.messages.solutionTextAdded = '<i class="fa fa-check-circle" aria-hidden="true"></i>  Sweet! Result created!';//solutionTextAdded
+        appConfig.messages.addMoreSolutions = '<i class="fa fa-check-circle" aria-hidden="true"></i>  Add more results to make test more interesting :)';//addMoreSolutions
+        appConfig.messages.somethingWentWrongWhileUpload = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Something went wrong during upload, please try again.';//alertSomethingGoesWrongWhileUpload
+        appConfig.messages.somethingWentWrong = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Something went wrong, please try again.';//alertSomethingWentWrong
+        appConfig.messages.pleaseWaitWhileMakingTest = '<i class="fa fa-cogs" aria-hidden="true"></i> We are creating content for your test now! Please be patient. :)';//alertPleaseWaitWhileMakingTest
+        appConfig.messages.acceptTerms = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> You have to read and accept the following conditions: terms of service & privacy policy.';//acceptTerms
+        appConfig.messages.copyToAll = 'Copy to all result text boxes';//copyToAllLabel
+        appConfig.messages.someMandatoryFieldsAreNotFilled = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Some mandatory fields are not filled';//alertSomeMandatoryFieldsAreNotFilled
+        appConfig.messages.someFieldsAreTooLong = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Some fields are too long';
+        appConfig.messages.translationExists = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Translation already exists';//alertTranslationExists
+        appConfig.messages.userBlocked = 'You tried too many times and this functionality was temporary blocked. Please try again later';
+        appConfig.messages.userBlockedPhotos = 'You uploaded too many photos and this functionality was temporary blocked. Please try again later';
+        appConfig.messages.linkCopied = 'Link has been copied! Paste wherever you want!';
+        appConfig.messages.share = 'messages.share';
+        appConfig.messages.placeholderTypeQuoteHere = 'Type the text that will be displayed in this result';
+        appConfig.messages.enterYourQuote = 'Enter your text';
+        appConfig.messages.players_name = 'player&#039;s name';
+        appConfig.messages.insert_placeholder_for_players_first_name = 'Insert a placeholder for the player&#039;s first name';
+        appConfig.messages.insert_placeholder_for_todays_date = 'Insert a placeholder for today&#039;s date';
+        appConfig.messages.todays_date = 'today&#039;s date';
+        appConfig.messages.ok = 'Ok';
+        appConfig.messages.cancel = 'Cancel';
+        appConfig.messages.wizard_test_result = 'Test Result ';
+        appConfig.messages.wizard_result_will_look_like_1 = 'This is how your test result ';
+        appConfig.messages.wizard_result_will_look_like_2 = ' will look like';
+        appConfig.messages.wizard_write_name_test_result = 'Write a name for the Test Result ';
+        appConfig.messages.wizard_which_gender = 'What gender should get this result?';
+        appConfig.messages.wizard_next_step = 'Next Step';
+        appConfig.messages.addTextOrChangeImage = 'Please add text or change image';
+
+        appConfig.icons = {};
+        // old gender icons
+        appConfig.icons.genderImageUnisexOld = "https://static-prod.testony.com/img/unisex.png"; //genderImageUnisex
+        appConfig.icons.genderImageMaleOld = "https://static-prod.testony.com/img/male.png"; //genderImageMale
+        appConfig.icons.genderImageFemaleOld = "https://static-prod.testony.com/img/female.png"; //genderImageFemale
+
+        // new gender icons
+        appConfig.icons.genderImageUnisexNew = "https://static-prod.testony.com/img/unisex-icon.png";//genderImageUnisexIcon
+        appConfig.icons.genderImageMaleNew = "https://static-prod.testony.com/img/male-icon.png";//genderImageMaleIcon
+        appConfig.icons.genderImageFemaleNew = "https://static-prod.testony.com/img/female-icon.png";//genderImageFemaleIcon
+
+        appConfig.icons.defaultAvatarSrc = 'https://static-prod.testony.com/img/defaultavatar.jpg';
+
+        appConfig.relatedTestExists = 0;
+
+        appConfig.system = {};
+        appConfig.user = {};
+        appConfig.test = {};
+
+        appConfig.consts = {};
+        appConfig.consts.sourceLevel = 'b';
+        appConfig.consts.sourceGender = 'g';
+        appConfig.consts.sourceSolutionId = 'e';
+        appConfig.consts.sourceText = 'f';
+        appConfig.consts.sourceLogic = 'h';
+        appConfig.consts.decisionId = 'i';
+    </script>
+<script>window.appConfig.user.fbUserId = '1799010460278166';window.appConfig.user.birthday = '';window.appConfig.user.gender = 'male';window.appConfig.user.locale = 'en';window.appConfig.user.location = 'in';window.appConfig.user.userAvatarSrc = 'https://lookaside.facebook.com/platform/profilepic/?asid=661872064010997&height=800&width=800&ext=1523508752&hash=AeRZdOgv3xqoormW';window.appConfig.user.userFirstName = 'Sanjit';</script><script>window.appConfig.system.appLocale = 'en';</script><script>window.appConfig.test.preOpenedNumberOfSolutionsOnTestCreation = '4';window.appConfig.test.minimumNumberOfSolutionsToSubmitTest = '2';window.appConfig.test.testFormTypeId = '1';window.appConfig.test.testTypeId = '1';</script><script>window.appConfig.dynamic = [];window.appConfig.dynamic.showCaptcha = false;</script>
+<script src="https://static-prod.testony.com/js/site.c5087166915cccaaf957.js"></script>
+<script>window.appConfig.user.fbUserId = '1799010460278166';window.appConfig.user.birthday = '';window.appConfig.user.gender = 'male';window.appConfig.user.locale = 'en';window.appConfig.user.location = 'in';window.appConfig.user.userAvatarSrc = 'https://lookaside.facebook.com/platform/profilepic/?asid=661872064010997&height=800&width=800&ext=1523508752&hash=AeRZdOgv3xqoormW';window.appConfig.user.userFirstName = 'Sanjit';</script><script>window.appConfig.system.appLocale = 'en';</script><script>window.appConfig.test.preOpenedNumberOfSolutionsOnTestCreation = '4';window.appConfig.test.minimumNumberOfSolutionsToSubmitTest = '2';window.appConfig.test.testFormTypeId = '1';window.appConfig.test.testTypeId = '1';</script><script>window.appConfig.dynamic = [];window.appConfig.dynamic.showCaptcha = false;</script> <script type="text/javascript">
+
+                        var fbPixel = "<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');\
+            fbq('init', '504125526642745'); \
+            fbq('track', 'create_quiz');\
+            <\/script>\
+            <noscript><img height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=504125526642745&ev=create_quiz&noscript=1'\/><\/noscript>";
+                
+        var uploadResolutionJson = [{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039697.jpg","imageFilename":"1256783321063253_1512039697.jpg","dominantColor":"#bc3770","dominantColorInverse":"#43c88f","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039714.jpg","imageFilename":"1256783321063253_1512039714.jpg","dominantColor":"#f7abe4","dominantColorInverse":"#08541b","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039727.jpg","imageFilename":"1256783321063253_1512039727.jpg","dominantColor":"#9852d7","dominantColorInverse":"#67ad28","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039739.jpg","imageFilename":"1256783321063253_1512039739.jpg","dominantColor":"#14b4c9","dominantColorInverse":"#eb4b36","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039753.jpg","imageFilename":"1256783321063253_1512039753.jpg","dominantColor":"#1c0407","dominantColorInverse":"#e3fbf8","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039765.jpg","imageFilename":"1256783321063253_1512039765.jpg","dominantColor":"#048307","dominantColorInverse":"#fb7cf8","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039780.jpg","imageFilename":"1256783321063253_1512039780.jpg","dominantColor":"#1c374a","dominantColorInverse":"#e3c8b5","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039791.jpg","imageFilename":"1256783321063253_1512039791.jpg","dominantColor":"#8f6aa9","dominantColorInverse":"#709556","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039805.jpg","imageFilename":"1256783321063253_1512039805.jpg","dominantColor":"#dba061","dominantColorInverse":"#245f9e","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039816.jpg","imageFilename":"1256783321063253_1512039816.jpg","dominantColor":"#dba061","dominantColorInverse":"#245f9e","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039830.jpg","imageFilename":"1256783321063253_1512039830.jpg","dominantColor":"#d0b469","dominantColorInverse":"#2f4b96","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039843.jpg","imageFilename":"1256783321063253_1512039843.jpg","dominantColor":"#1d3c78","dominantColorInverse":"#e2c387","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039855.jpg","imageFilename":"1256783321063253_1512039855.jpg","dominantColor":"#7fd039","dominantColorInverse":"#802fc6","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039870.jpg","imageFilename":"1256783321063253_1512039870.jpg","dominantColor":"#343e4f","dominantColorInverse":"#cbc1b0","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039884.jpg","imageFilename":"1256783321063253_1512039884.jpg","dominantColor":"#d64c65","dominantColorInverse":"#29b39a","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039896.jpg","imageFilename":"1256783321063253_1512039896.jpg","dominantColor":"#e7a14c","dominantColorInverse":"#185eb3","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039906.jpg","imageFilename":"1256783321063253_1512039906.jpg","dominantColor":"#e9a037","dominantColorInverse":"#165fc8","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039926.jpg","imageFilename":"1256783321063253_1512039926.jpg","dominantColor":"#643759","dominantColorInverse":"#9bc8a6","lightenOrDarken":"#FFFFFF"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039936.jpg","imageFilename":"1256783321063253_1512039936.jpg","dominantColor":"#de956a","dominantColorInverse":"#216a95","lightenOrDarken":"#000000"},{"picture":"https:\/\/static-prod.testony.com\/upload\/1256783321063253_1512039948.jpg","imageFilename":"1256783321063253_1512039948.jpg","dominantColor":"#852104","dominantColorInverse":"#7adefb","lightenOrDarken":"#FFFFFF"}];
+    </script>
+<script>
+                (function() {
+            var sessionRefreshTime = 300;
+            setInterval(function () {
+                $.ajax({
+                    type: "get",
+                    url: 'https://en.testony.com/session_refresh',
+                    dataType: 'json',
+                    success: function(data) {
+                        if(!data.auth) {
+                                                            $.ajax({
+                                    type: "get",
+                                    url: 'https://en.testony.com/api/v2/tests/has-auto-save/223743414',
+                                    dataType: 'json',
+                                    success: function(data) {
+                                        if(!data.has) {
+                                            Site.global.alert('Sorry, your session expired.', function() {
+                                                location.reload();
+                                            });
+                                        } else {
+                                            Site.global.confirm('Sorry, your session expired. You have unfinished test, do you want to finish it?', function(){
+                                                location.href = 'https://en.testony.com/mytests/new/auto/edit';
+                                            }, function(){
+                                                location.reload();
+                                            });
+                                        }
+                                    }
+                                });
+                            
+                            return;
+                        }
+
+                        if(data.token) {
+                            $('meta[name="csrf_token"]').attr('content', data.token);
+                        }
+                    }
+                });
+            }, sessionRefreshTime * 1000);
+        })();
+            </script>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script>
+        if (typeof googletag === "function") {
+            googletag.pubads().collapseEmptyDivs(true);
+        }
+    </script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+        appId: "36e3b3db-c74f-406c-b453-4afe332c657e",
+        autoRegister: true,
+        promptOptions: {
+            actionMessage: "We’d like to show you notification updates about tests you’ve created!",
+            acceptButtonText: "ALLOW",
+            cancelButtonText: "NO THANKS"
+        },
+        notifyButton: {
+            enable: false
+        },
+        welcomeNotification: {
+            disable: true
+        }
+    }]);
+
+    OneSignal.push(function() {
+                    OneSignal.sendTags({
+                realname: 'Sanjit Rai',
+                firstname: 'Sanjit',
+                gender: 'male',
+                points: '1',
+                highscore: '0',
+            });
+                // Occurs when the user's subscription changes to a new value.
+        OneSignal.on('subscriptionChange', function (isSubscribed) {
+            if (isSubscribed) {
+                OneSignal.push(["getUserId", function(userId) {
+                    $.post('https://en.testony.com/notificate/userid', {
+                        'userId': userId
+                    });
+                }]);
+                if (typeof ga === "function") {
+                    ga('send', 'event', 'PushPermissionAccepted');
+                }
+            } else {
+                OneSignal.push(["getUserId", function(userId) {
+                    $.post('https://en.testony.com/notificate/userid', {
+                        'userId': 'removed'
+                    });
+                }]);
+            }
+        });
+    });
+</script>
+</head>
+<body id="app-layout">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7RWSN"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="app-banner" class="hidden">
+<div class="app-banner--content">
+<div class="row">
+<div class="col-xs-1">
+<span id="close-app-banner">&times;</span>
+</div>
+<div class="col-xs-2">
+<img class="img-responsive" src="https://static-prod.testony.com/img/logo_4x.png" alt="">
+</div>
+<div class="col-xs-8">
+<p>Would you like to use our testony.com app?</p>
+<div class="row">
+<div class="col-xs-6 stars">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</div>
+<div class="col-xs-6 open-app text-xs-right">
+<a id="goto-app" href="#">Goto app</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="fb-login-modal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body text-center">
+<img class="img-responsive" src="https://static-prod.testony.com/img/logo_115x115.png" alt="TestOny">
+<p>
+Please Login with Facebook to Create your own free Test!
+<br>
+100% easy, 100% free, 100% secure!
+</p>
+</div>
+<div class="modal-footer text-center">
+<div class="btn login-with-facebook" id="fb_login" role="button">
+<img class="social-btn-icon" src="https://static-prod.testony.com/img/fb-icon-small.png" alt="">
+Continue with Facebook
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--<nav class="navbar navbar-default navbar-static-top">
+<div class="container">
+<div class="navbar-header clearfix">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+<span class="sr-only">Toggle Navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="dropdown search-test-dropdown search-test-dropdown-small hidden-md hidden-lg">
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<i class="fa fa-search" aria-hidden="true"></i>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<div class="input-group">
+<input type="text" class="form-control searchTestsInputXSSM" placeholder="Search tests ..." autocomplete="off" class="form-control">
+<div class="input-group-btn">
+<div class="btn-group" role="group">
+<div class="dropdown dropdown-lg">
+<button type="button" class="btn btn-default searchTestsButtonXSSM"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="fb-like-btn-wrapper hidden-xs hidden-sm">
+<span>
+<div class="fb-like" data-href="https://www.facebook.com/testonycom-887960371337078/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">
+</div>
+</span>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="app-navbar-collapse">
+<div class="navbar-menu">
+
+<ul class="nav navbar-nav">
+<li class="fb-like-btn-wrapper hidden-sm hidden-md hidden-lg">
+<span style="margin-left: 24px; margin-bottom: 3px; display: block;">
+<div class="fb-like" data-href="https://www.facebook.com/testonycom-887960371337078/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">
+</div>
+</span>
+</li>
+<li><a href="https://en.testony.com">Home</a></li>
+<li><a href="https://en.testony.com/tests/trending">Trending</a></li>
+<li>
+<a class="new-test-nav" onclick="ga('send', 'event', 'Call-to-action-button', 'ClickOnNewTestTopNavLink');" href="https://en.testony.com/tests/newTest">Create your own test!</a>
+</li>
+<li><a href="https://en.testony.com/mytests">My tests</a></li>
+<li>
+<select id="langSelector" onchange="/*window.location = $(':selected',this).attr('value')*/">
+<option selected="selected" value="//en.testony.com">English (US)</option>
+<option value="//de.testony.com">Deutsch</option>
+<option value="//ar.testony.com">اللغة العربية</option>
+<option value="//bn.testony.com">বাংলা ভাষা</option>
+<option value="//bs.testony.com">Bosanski</option>
+<option value="//bg.testony.com">Български</option>
+<option value="//zh.testony.com">中國</option>
+<option value="//da.testony.com">Dansk</option>
+<option value="//et.testony.com">Eesti</option>
+<option value="//fi.testony.com">Suomi</option>
+<option value="//fr.testony.com">Français</option>
+<option value="//el.testony.com">Ελληνικά</option>
+<option value="//he.testony.com">עברית</option>
+<option value="//hi.testony.com">हिन्दी</option>
+<option value="//id.testony.com">Indonesian</option>
+<option value="//it.testony.com">Italiano</option>
+<option value="//ja.testony.com">日本語</option>
+<option value="//kk.testony.com">Қазақша</option>
+<option value="//hr.testony.com">Hrvatski</option>
+<option value="//ko.testony.com">한국어</option>
+<option value="//lv.testony.com">Latviešu</option>
+<option value="//lt.testony.com">Lietuvių</option>
+<option value="//mk.testony.com">Македонски</option>
+<option value="//ms.testony.com">Malay</option>
+<option value="//ne.testony.com">नेपाली</option>
+<option value="//nl.testony.com">Nederlands</option>
+<option value="//no.testony.com">Norsk</option>
+<option value="//pl.testony.com">Polski</option>
+<option value="//pt.testony.com">Português (Brasil)</option>
+<option value="//ro.testony.com">Română</option>
+<option value="//ru.testony.com">Русский</option>
+<option value="//sv.testony.com">Svenska</option>
+<option value="//sr.testony.com">Српски</option>
+<option value="//sk.testony.com">Slovenčina</option>
+<option value="//sl.testony.com">Slovenščina</option>
+<option value="//es.testony.com">Español</option>
+<option value="//sw.testony.com">Kiswahili</option>
+<option value="//tl.testony.com">Tagalog</option>
+<option value="//cs.testony.com">Čeština</option>
+<option value="//th.testony.com">ภาษาไทย</option>
+<option value="//tr.testony.com">Türkçe</option>
+<option value="//uk.testony.com">Українська</option>
+<option value="//hu.testony.com">Magyar</option>
+<option value="//ur.testony.com">اردو</option>
+<option value="//vi.testony.com">Tiếng Việt</option>
+<option value="//xx.testony.com">Other</option>
+</select>
+</li>
+<li class="dropdown search-test-dropdown hidden-xs hidden-sm">
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<i class="fa fa-search" aria-hidden="true"></i>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<div class="input-group">
+<input type="text" class="form-control searchTestsInputMDLG" placeholder="Search tests ..." autocomplete="off" class="form-control">
+<div class="input-group-btn">
+<div class="btn-group" role="group">
+<div class="dropdown dropdown-lg">
+<button type="button" class="btn btn-default searchTestsButtonMDLG"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<li>
+</ul>
+
+
+<ul class="nav navbar-nav navbar--auth">
+
+<li class="dropdown">
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<img class="img-responsive img-circle" src="https://lookaside.facebook.com/platform/profilepic/?asid=661872064010997&amp;height=800&amp;width=800&amp;ext=1523508752&amp;hash=AeRZdOgv3xqoormW" width="40" alt="Sanjit Rai" title="Sanjit Rai">
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<a class="logout" href="https://en.testony.com/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>-->
+<div id="main-content" class="main-content--ab">
+<div class="container container-subpage container-padd-0">
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="row">
+<div class="col-xs-6">
+Create your own test!
+</div>
+<div class="col-xs-6 text-right">
+<a href="https://en.testony.com/user/661872064010997">My profile</a>
+</div>
+</div>
+</div>
+<div class="panel-body panel-body--mytest">
+<script>
+    var ImageUploader = {
+        cropper: null,
+
+        init: function () {
+
+            $('#upload-input').on('change', function () {
+                ImageUploader.showLoader();
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    ImageUploader.showCropper(e.target.result);
+                    ImageUploader.hideLoader();
+                };
+                reader.readAsDataURL(this.files[0]);
+
+                $(this).val('');
+            });
+
+            $('#download-via-url').on('click', function () {
+
+                ImageUploader.showLoader();
+                $.ajax({
+                    type: "POST",
+                    url: appConfig.routes.downloadImage,
+                    data: {
+                        url: $('#upload-url').val()
+                    },
+                    timeout: appConfig.config.timeouts.imageUpload
+                }).done(function (data) {
+                    if (data.dataUrl !== false) {
+                        $('#upload-url').val('');
+
+                        ImageUploader.showCropper(data.dataUrl);
+                    }
+                    ImageUploader.hideLoader();
+                }).fail(function(data){
+                    ImageUploader.hideLoader();
+                    if (typeof(data.responseJSON) !== 'undefined' && data.responseJSON.error != null && data.responseJSON.error != '') {
+                        alertify.error(data.responseJSON.error);
+                    } else {
+                        alertify.error(appConfig.messages.somethingWentWrong);
+                    }
+                });
+            });
+
+            var checkUrlField = function() {
+                var url = $('#upload-url').val().trim();
+
+                $('#download-via-url').prop('disabled', '' == url);
+            };
+
+            $('#upload-url')
+                .change(checkUrlField)
+                .keyup(checkUrlField)
+                .on('paste', function () {
+                    setTimeout(checkUrlField, 0)
+                })
+                .on('cut', function () {
+                    setTimeout(checkUrlField, 0);
+                });
+
+            checkUrlField();
+
+            $('#upload-done-button').click(function () {
+                ImageUploader.dataUrlProcessor(ImageUploader.cropper.getCroppedCanvas({
+                    width: 400,
+                    height: 400
+                }).toDataURL('image/jpeg', 0.7));
+            });
+
+            $('#image-rotate-left').click(function(){
+                ImageUploader.cropper.rotate(-90);
+                return false;
+            });
+
+            $('#image-rotate-right').click(function(){
+                ImageUploader.cropper.rotate(90);
+                return false;
+            });
+
+            /*$('#image-zoom-plus').click(function(){
+                ImageUploader.cropper.zoom(0.1);
+                return false;
+            });
+
+            $('#image-zoom-minus').click(function(){
+                ImageUploader.cropper.zoom(-0.1);
+                return false;
+            });*/
+
+            var resizeImage = function(){
+                $('#cropper-image').css({maxHeight: (($(window).height() - 150) * 0.9) + 'px'});
+            };
+
+            $(window).on('resize', resizeImage);
+            resizeImage();
+        },
+
+        show: function (dataUrlProcessor) {
+            ImageUploader.dataUrlProcessor = dataUrlProcessor;
+
+            $('#upload-url').val('').change();
+
+            $('#upload-modal')
+                .removeClass('cropper')
+                .addClass('upload')
+                .modal({
+                    backdrop: 'static'
+                });
+        },
+
+        showCropper: function (dataUrl) {
+
+            var show = function(finalDataUrl) {
+                if(ImageUploader.cropper) {
+                    ImageUploader.cropper.destroy();
+                }
+
+                var image = document.getElementById('cropper-image');
+
+                image.src = finalDataUrl;
+
+                $('#upload-modal')
+                    .removeClass('upload')
+                    .addClass('cropper');
+
+                ImageUploader.cropper = new Cropper(image, {
+                    viewMode: 2,
+                    aspectRatio: 1,
+                    autoCropArea: 1,
+                    dragMode: 'move',
+                    background: false,
+                    zoomable: false,
+                    minCanvasWidth: 200,
+                    minCanvasHeight: 200,
+                    checkOrientation: 'ArrayBuffer' in window,
+                    center: false,
+                    guides: false,
+                    ready: function () {
+                        ImageUploader.hideLoader();
+                    }
+                });
+            };
+
+            var resize = function(width, height, maxSize) {
+                var sizes = {
+                    width: width,
+                    height: height
+                };
+
+                if(sizes.width <= maxSize && sizes.height <= maxSize) return sizes;
+
+                if(sizes.width > sizes.height) {
+                    sizes.height = Math.ceil(sizes.height * maxSize / sizes.width);
+                    sizes.width = maxSize;
+                } else {
+                    sizes.width = Math.ceil(sizes.width * maxSize / sizes.height);
+                    sizes.height = maxSize;
+                }
+
+                return sizes;
+            };
+
+            // Check image sizes, if too big
+            var tempImage = new Image();
+            tempImage.src = dataUrl;
+            tempImage.onload = function(){
+                var can = document.createElement('canvas');
+                var ctx = can.getContext('2d');
+
+                var sizes = resize(tempImage.width, tempImage.height, 1024);
+
+                can.width = sizes.width;
+                can.height = sizes.height;
+                ctx.drawImage(tempImage, 0, 0, sizes.width, sizes.height);
+
+                show(can.toDataURL());
+            };
+        },
+
+        showLoader: function() {
+            $('#image-upload-spinner').show();
+            $('.image-manipulation-btn').hide();
+        },
+
+        hideLoader: function() {
+            $('#image-upload-spinner').hide();
+            $('.image-manipulation-btn').show();
+        },
+
+        isSupportedByBrowser: function () {
+            var fileReaderSupport = ((window.File != undefined) && (window.FileList != undefined) && (window.FileReader != undefined));
+
+            var elem = window.document.createElement('canvas');
+            var canvasSupport = !!(elem.getContext && elem.getContext('2d'));
+
+            return fileReaderSupport && canvasSupport;
+        },
+
+        cachedCanExecute: null,
+        canExecute: function() {
+            if(ImageUploader.cachedCanExecute == null) {
+                ImageUploader.cachedCanExecute = ImageUploader.isSupportedByBrowser();
+            }
+
+            return ImageUploader.cachedCanExecute;
+        },
+
+        dataUrlProcessor: function () {
+        }
+    };
+
+    $(function () {
+        if(!ImageUploader.canExecute()) {
+            alert('Sorry, your browser is not supported');
+            document.location.href = '/';
+        }
+
+        ImageUploader.init();
+    });
+
+</script>
+<script src="https://static-prod.testony.com/js/cropper.280fe8d62ca3572a4702.js"></script>
+<div id="upload-modal" class="modal upload" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<p class="lead" style="margin-bottom: 0;">
+Upload image <img id="image-upload-spinner" src="https://static-prod.testony.com/img/ajaxloader.gif" alt="">
+</p>
+</div>
+<div class="modal-body upload-body">
+<div class="text-center">
+<input type="file" id="upload-input" accept="image/*">
+<div class="btn btn-primary btn-lg" onclick="document.getElementById('upload-input').click();">Choose a local file</div>
+</div>
+<div class="upload-or-text text-center">
+or </div>
+<div class="modal-row">
+<div class="modal-row-item modal-row-item--lrg">
+<input type="text" id="upload-url" class="form-control" placeholder="Image address(URL)">
+</div>
+<div class="modal-row-item modal-row-item--sml">
+<input type="button" id="download-via-url" class="btn btn-primary" value="Upload image">
+</div>
+</div>
+</div>
+<div class="modal-body cropper-body">
+<div class="cropper-image-container">
+<img id="cropper-image" alt="">
+</div>
+<div class="text-center">
+<button id="image-rotate-left" class="btn btn-primary image-manipulation-btn"><i class="fa fa-rotate-left"></i></button>
+<button id="image-rotate-right" class="btn btn-primary image-manipulation-btn"><i class="fa fa-rotate-right"></i></button>
+
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+<button id="upload-done-button" type="button" class="btn btn-primary pull-right" data-dismiss="modal">Upload image</button>
+</div>
+</div>
+</div>
+</div>
+<form>
+<div id="firstPanel" class="">
+<div class="panel panel-default">
+<div class="panel-heading hidden-xs">
+<div class="test-creation-step">
+<span class="step-number"><span>1</span></span>
+<span class="step-headline">Enter general test information</span>
+</div>
+</div>
+<div id="firstPanelBody" class="panel-body">
+<div class="row">
+<div class="col-xs-12 col-md-6">
+<div class="form-group form-group">
+<div class="col-xs-12">
+<label for="test_name" class="control-label">Test name:</label>
+<input class="form-control" id="test_name" placeholder="Enter a test title in form of a question" name="test_name" type="text">
+<span class="form-span">*The test’s question should end with a question mark (?).</span>
+<div class="help-block text-left"></div>
+</div>
+</div>
+<div class="form-group form-group hidden">
+<div class="col-xs-12">
+<label for="test_description" class="control-label">Test description:</label>
+<textarea class="form-control" rows="3" id="test_description" placeholder="Type here what your test is about ..." name="test_description" cols="50"></textarea>
+<div class="help-block text-left"></div>
+</div>
+</div>
+<div class="form-group form-group">
+<div class="col-xs-12 col-md-6">
+<label class="control-label">Select test language:</label>
+<select class="form-control" id="test_language">
+<option value="">Select</option>
+<option data-locale="en" selected="selected" value="1">English (US)</option>
+<option data-locale="de" value="2">Deutsch</option>
+<option data-locale="ar" value="3">اللغة العربية</option>
+<option data-locale="bn" value="4">বাংলা ভাষা</option>
+<option data-locale="bs" value="5">Bosanski</option>
+<option data-locale="bg" value="6">Български</option>
+<option data-locale="zh" value="7">中國</option>
+<option data-locale="da" value="8">Dansk</option>
+<option data-locale="et" value="9">Eesti</option>
+<option data-locale="fi" value="10">Suomi</option>
+<option data-locale="fr" value="11">Français</option>
+<option data-locale="el" value="12">Ελληνικά</option>
+<option data-locale="he" value="13">עברית</option>
+<option data-locale="hi" value="14">हिन्दी</option>
+<option data-locale="id" value="15">Indonesian</option>
+<option data-locale="it" value="16">Italiano</option>
+<option data-locale="ja" value="17">日本語</option>
+<option data-locale="kk" value="18">Қазақша</option>
+<option data-locale="hr" value="19">Hrvatski</option>
+<option data-locale="ko" value="20">한국어</option>
+<option data-locale="lv" value="21">Latviešu</option>
+<option data-locale="lt" value="22">Lietuvių</option>
+<option data-locale="mk" value="23">Македонски</option>
+<option data-locale="ms" value="24">Malay</option>
+<option data-locale="ne" value="25">नेपाली</option>
+<option data-locale="nl" value="26">Nederlands</option>
+<option data-locale="no" value="27">Norsk</option>
+<option data-locale="pl" value="28">Polski</option>
+<option data-locale="pt" value="29">Português (Brasil)</option>
+<option data-locale="ro" value="30">Română</option>
+<option data-locale="ru" value="31">Русский</option>
+<option data-locale="sv" value="32">Svenska</option>
+<option data-locale="sr" value="33">Српски</option>
+<option data-locale="sk" value="34">Slovenčina</option>
+<option data-locale="sl" value="35">Slovenščina</option>
+<option data-locale="es" value="36">Español</option>
+<option data-locale="sw" value="37">Kiswahili</option>
+<option data-locale="tl" value="38">Tagalog</option>
+<option data-locale="cs" value="39">Čeština</option>
+<option data-locale="th" value="40">ภาษาไทย</option>
+<option data-locale="tr" value="41">Türkçe</option>
+<option data-locale="uk" value="42">Українська</option>
+<option data-locale="hu" value="43">Magyar</option>
+<option data-locale="ur" value="44">اردو</option>
+<option data-locale="vi" value="45">Tiếng Việt</option>
+<option data-locale="xx" value="46">Other</option>
+</select>
+<span class="form-span">*Tests with incorrect language selection will be deleted!</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="secondPanel" class="form-horizontal">
+<div id="divTestId"> </div>
+<div class="panel panel-default">
+<div class="panel-heading hidden-xs">
+<div class="test-creation-step">
+<span class="step-number"><span>2</span></span>
+<span class="step-headline">Please add test results and upload result images</span>
+</div>
+</div>
+<div class="panel-body">
+<div class="row"></div>
+<div class="text-center">
+<span class="span">*Tests that have more then 6 solutions are very popular!</span>
+<br>
+<button type="button" class="btn btn-default btn--v2 has-spinner" id="addSolutionId">Add another result <i class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+</div>
+</div>
+</div>
+</form>
+<div class="sticky-foot text-center">
+<div id="acceptTermsDivId">
+<span class="sticky-foot-span">
+By clicking the button below I confirm that I read and accept the
+<a href="http://www.socialsweethearts.de/terms_en.html" rel="nofollow" target="_blank">Terms of service</a>,
+<a href="https://en.testony.com/page/content-guideline/2" rel="nofollow" target="_blank">Content guideline</a>
+and
+<a href="http://www.socialsweethearts.de/privacy_en.html" rel="nofollow" target="_blank">Privacy policy</a>
+</span>
+<button id="finishId" class="btn btn-success btn--v2 has-spinner">Finish Quiz</button>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+
+<script>
+    var gpt2 = [];
+    if (typeof googletag !== 'undefined') {
+        googletag.cmd.push(function () {
+
+            var mapping2 = googletag.sizeMapping().addSize([970, 90],
+                [970, 90]).build();
+
+            var mapping2a = googletag.sizeMapping().addSize([728, 90],
+                [728, 90]).build();
+
+            var mapping2b = googletag.sizeMapping().addSize([320, 100],
+                [320, 100]).build();
+
+            if (window.innerWidth < 768) {
+                gpt2[0] = googletag.defineSlot(
+                    '/53015287/testony.com_m_320x100_1', [320, 100], 'testony.com_d_970x90_1')
+                    .defineSizeMapping(mapping2b).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            if (window.innerWidth < 1050 && window.innerWidth >= 768) {
+                gpt2[0] = googletag.defineSlot(
+                    '/53015287/testony.com_d_728x90_1', [728, 90], 'testony.com_d_970x90_1')
+                    .defineSizeMapping(mapping2a).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            if (window.innerWidth >= 1050) {
+                gpt2[0] = googletag.defineSlot(
+                    '/53015287/testony.com_d_970x90_1', [970, 90], 'testony.com_d_970x90_1')
+                    .defineSizeMapping(mapping2).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            // Start ad fetching
+            googletag.enableServices();
+        });
+    }
+</script>
+<div id="testony.com_d_970x90_1" class="leaderboard-ad">
+<script>
+        googletag.cmd.push(function () {
+            googletag.display('testony.com_d_970x90_1');
+        });
+    </script>
+</div> </div>
+<br>
+<div class="text-center">
+
+<script>
+    var gpt3 = [];
+    if (typeof googletag !== 'undefined'){
+
+        googletag.cmd.push(function () {
+
+            var mapping3 = googletag.sizeMapping().addSize([300, 250],
+                [300, 250]).build();
+
+            var mapping3a = googletag.sizeMapping().addSize([300, 250],
+                [300, 250]).build();
+
+            if (window.innerWidth < 768) {
+                gpt3[0] = googletag.defineSlot(
+                    '/53015287/testony.com_m_300x250_1', [300, 250], 'testony.com_d_300x250_1')
+                    .defineSizeMapping(mapping3a).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            if (window.innerWidth >= 768) {
+                gpt3[0] = googletag.defineSlot(
+                    '/53015287/testony.com_d_300x250_1', [300, 250], 'testony.com_d_300x250_1')
+                    .defineSizeMapping(mapping3).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            // Start ad fetching
+            googletag.enableServices();
+        });
+    }
+</script>
+<div id="testony.com_d_300x250_1" class="rectangle-ad rectangle-ad-1">
+<script>
+        if (typeof googletag !== 'undefined') {
+            googletag.cmd.push(function () {
+                googletag.display('testony.com_d_300x250_1');
+            });
+        }
+    </script>
+</div> </div>
+<br>
+<div class="text-center">
+
+<script>
+    var gpt4 = [];
+    if (typeof googletag !== 'undefined') {
+        googletag.cmd.push(function () {
+
+            var mapping4 = googletag.sizeMapping().addSize([300, 250],
+                [300, 250]).build();
+
+            var mapping4a = googletag.sizeMapping().addSize([300, 250],
+                [300, 250]).build();
+
+            if (window.innerWidth < 768) {
+                gpt4[0] = googletag.defineSlot(
+                    '/53015287/testony.com_m_300x250_2', [300, 250], 'testony.com_d_300x250_2')
+                    .defineSizeMapping(mapping4a).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+            }
+
+            if (window.innerWidth >= 768) {
+                gpt4[0] = googletag.defineSlot(
+                    '/53015287/testony.com_d_300x250_2', [300, 250], 'testony.com_d_300x250_2')
+                    .defineSizeMapping(mapping4).setCollapseEmptyDiv(true, true)
+                    .addService(googletag.pubads());
+
+            }
+
+            // Start ad fetching
+            googletag.enableServices();
+        });
+    }
+</script>
+<div id="testony.com_d_300x250_2" class="rectangle-ad rectangle-ad-2">
+<script>
+        if (typeof googletag !== 'undefined') {
+            googletag.cmd.push(function () {
+                googletag.display('testony.com_d_300x250_2');
+            });
+        }
+    </script>
+</div> </div>
+<footer class="container text-center">
+<div class="row">
+<div class="col-xs-12 text-center">
+<ul>
+<li><a href="http://www.socialsweethearts.de/terms_en.html" rel="nofollow" target="_blank">Terms of service</a> &middot;</li>
+<li><a href="http://www.socialsweethearts.de/privacy_en.html" rel="nofollow" target="_blank">Privacy policy</a> &middot;</li>
+<li><a href="http://www.socialsweethearts.de/en_US/imprint" rel="nofollow" target="_blank">Imprint</a> &middot;</li>
+<li><a href="https://en.testony.com/page/content-guideline/2" rel="nofollow" target="_blank">Content guideline</a> &middot;</li>
+<li><a href="https://en.testony.com/support/feedback" rel="nofollow">Feedback</a> &middot;</li>
+<li><a href="http://www.socialsweethearts.de/en_US/it-career" rel="nofollow" target="_blank">Jobs</a> &middot;</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdanj1dniSSTXBaTbSepwBct9rGSZpB392JbyRBwC4ladeb7Q/viewform" rel="nofollow" target="_blank">Become a partner</a> &middot;</li>
+<li><a class="new-test-footer" href="https://en.testony.com/tests/newTest">Create your own test!</a></li>
+<li><a class="logout" href="https://en.testony.com/logout" rel="nofollow">Logout</a></li>
+</ul>
+<!--googleoff: index-->
+<!--googleon: index-->
+<span><a href="https://www.socialsweethearts.de/terms_en.html" rel="nofollow" target="_blank">All content is user generated and provided for fun and entertainment purposes only. We kindly ask you to use the app only, if other users will not be affected adversely. Thank you and have fun with our app!</a></span>
+<span>Technical Service Provider & Hosting: <a target="_blank" href="http://www.socialsweethearts.de/en_US/" rel="nofollow">Social Sweethearts® GmbH</a></span>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://static-prod.testony.com/js/md5.00ab2637b15fc505dc22.js"></script>
+
+<script>
+                    (function(h,o,t,j,a,r){
+                        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                        h._hjSettings={hjid:540111,hjsv:6};
+                        a=o.getElementsByTagName('head')[0];
+                        r=o.createElement('script');r.async=1;
+                        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                        a.appendChild(r);
+                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+                </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f3088fd0c9","applicationID":"34199027","transactionName":"YwRVYkAFWUIDBUNeCVpOdlVGDVhfTQVFUgdABGNTQRBjSBID","queueTime":0,"applicationTime":47,"atts":"T0NWFAgfSkw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+    }
+    window.addEventListener('beforeinstallprompt', function (e) {
+        if (typeof ga === "function") {
+            ga('send', 'event', 'AddToHomeScreen', 'popup', '', {
+                nonInteraction: true
+            });
+        }
+        e.userChoice.then(function (choiceResult) {
+            if (typeof ga === "function") {
+                ga('send', 'event', 'AddToHomeScreen', choiceResult.outcome, '', {
+                    nonInteraction: true
+                });
+            }
+        });
+    });
+</script>
+</html>

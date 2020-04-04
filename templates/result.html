@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{title}}</title>
+        <meta name="description" content="Martin is a responsive creative template">
+    <meta name="keywords" content="portfolio, personal, corporate, business, parallax, creative, agency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/favicon.ico" rel="icon" type="image/png">
+     {% include  "style-header.html" %}
+     <style type="text/css">
+      .san {
+    margin: 50px;
+    padding:50px;
+}
+
+ .design{
+		border:1px solid black;
+		background-image:url(static/img/night-star.jpg);
+		width:400px;
+		height:300px;
+	    margin:120px;
+	}
+     </style>
+      <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="http://localhost:5000/science/result.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="localhost:5000/science" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="http://localhost:5000/static/img/night-star.png" />
+    </head>
+    <body style="background-color: #7e7e7e">
+
+     <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=437486770003606&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+ 
+
+    <!-- ====== Navgition ======  -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- logo -->
+          <a href="/">
+            <div class="logo">
+              <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            </div>
+          </a>
+        </div>
+        <!-- Collect the nav links, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="nav-icon-collapse">
+        <!-- links -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="create-test.html">Create Test</a></li>
+            <!--<li><a href="#" data-scroll-nav="4">Trending </a></li>
+            <li><a href="#" data-scroll-nav="5">MyTest</a></li>-->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+	<div class="design">
+
+	<p>
+   {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li style="text-align:center; padding: 30px; font-size: 30px; color:  #FF305B; ">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+ 
+  </p>
+	<img src="{{ user_image }}" alt="image" style="width:150px;height:150px;margin:-25px 120px; "/>
+</div>
+<div class="fb-share-button" data-href="http://localhost:5000/science" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A5000%2Fscience&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+</body>
+</html>

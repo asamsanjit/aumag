@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box_pannel{
+			border:1px solid black;
+			background-color: brown;
+			margin-left: 50px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box_pannel">
+			<center>
+			<table border="1"><th> Test Result </th> <th> Test Name </th></tr>
+			{% for row in rows %}
+    		  <tr> 
+    		   <td>  {{ row['test_name'] }}</td>
+    		     <td>  {{ row['test_result1'] }}</td>
+    		</tr> 
+  		  {% endfor %}
+		</table>
+	</center>
+	</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Relation</title>
+        <meta name="description" content="Martin is a responsive creative template">
+    <meta name="keywords" content="portfolio, personal, corporate, business, parallax, creative, agency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/favicon.ico" rel="icon" type="image/png">
+     {% include  "style-header.html" %}
+     <style type="text/css">
+      .san {
+    margin: 50px;
+    padding:50px;
+}
+
+     </style>
+    </head>
+    <body style="background-color: #7e7e7e">
+
+    <!-- ====== Navgition ======  -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- logo -->
+          <a href="/">
+            <div class="logo">
+              <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            </div>
+          </a>
+        </div>
+        <!-- Collect the nav links, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="nav-icon-collapse">
+        <!-- links -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="create-test.html">Create Test</a></li>
+            <!--<li><a href="#" data-scroll-nav="4">Trending </a></li>
+            <li><a href="#" data-scroll-nav="5">MyTest</a></li>-->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+	
+  <div id="fb-root"></div>
+
+
+<script>
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=437486770003606&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '437486770003606',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.8' // use graph api version 2.8
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call 
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+    FB.logout(function(response) {
+   // Person is now logged out
+});
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>-->
+
+<section id="services" class="services section-padding">
+      <div >
+
+          <div class="col-md-4 items relation">
+              <div>
+              <img src="{{url_for('static', filename='img/relationR2.png')}}" alt="image" style="width:400px;height:300px;"/>
+              <div >
+                <div class="overlay-info v-middle text-center">
+                  <h6 class="sm-titl" style="color:#161616; font-weight:bold;font-size: 45px; font-family:"Lucida" Grande, sans-serif;">What girls thinks about you?</h6>
+                  <div>
+
+                    <button type="button" onclick="/relationR2" class="butn butn-bg"><a href="relationR2">view result</a></button>
+                    <!--<span class="icon">
+                      <a href="#0">
+                        <span class="icon-attachment"></span>
+                      </a>
+                    </span>-->
+                  
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <form  method = post>
+          <div >
+          
+          <div class="col-md-4 items relation">
+              <div>
+              <img src="{{url_for('static', filename='img/r2.jpg')}}" alt="image" style="width:400px;height:300px;"/>
+              <div >
+                <div class="overlay-info v-middle text-center">
+                  <h6 class="sm-titl" style="color:black; font-size:45px;"></h6>
+                  <div>
+                    <p style="text-align:center; padding: 30px; font-size: 50px; color:#507D2A; font-family:Impact, Charcoal, sans-serif;">Who is ur Dieheart lover?</p>
+                    <button type="button" onclick="/relationR" class="butn butn-bg" value="{{ request.form.username }}"><a href="relationR" target="_blank">view result</a></button>             
+                  </div>                
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          </form>
+        </section>
+{% include 'footer.html' %}
+</body>
+</html>
